@@ -1,0 +1,32 @@
+--Create a craft store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER);
+
+INSERT INTO store VALUES (1, "acrylic paint", "paint",.99);
+INSERT INTO store VALUES (2, "fabric paint", "paint",1.99);
+INSERT INTO store VALUES (3, "succulents", "floral", 5.99);
+INSERT INTO store VALUES (4, "cardstock", "paper",2.99);
+INSERT INTO store VALUES (5, "cookie cutters", "baking and kitchen", 3.29);
+INSERT INTO store VALUES (6, "resin", "art supplies", 11.99);
+INSERT INTO store VALUES (7, "cupcake stands", "baking and kitchen", 7.99);
+INSERT INTO store VALUES (8, "spray paint", "paint", 6.99);
+INSERT INTO store VALUES (9, "paint markers", "paint", 5.99);
+INSERT INTO store VALUES (10, "oil paint", "paint", 3.99);
+INSERT INTO store VALUES (11, "wreaths", "floral", 11.99);
+INSERT INTO store VALUES (12, "tshirts", "appareal craft", 5.99);
+INSERT INTO store VALUES (13, "tote bags", "appareal craft", 6.59);
+INSERT INTO store VALUES (14, "crochet needle", "yarn and needle supplies", 2.69);
+INSERT INTO store VALUES (15, "buttons", "fabric and sewing", 1.99);
+
+---display the database ordered by price
+SELECT * FROM store
+ORDER BY price asc;
+
+
+--What is the average price of paint items?
+SELECT AVG(price) "avg paint item price"
+FROM store
+Where section="paint";
+
+
+
